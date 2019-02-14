@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="burclar">
+        <item>Boga</item>
+        <item>Aslan</item>
+        <item>At</item>
+    </string-array>
+</resources>
