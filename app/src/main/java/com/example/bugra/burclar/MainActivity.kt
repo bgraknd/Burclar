@@ -40,11 +40,17 @@ class MainActivity : AppCompatActivity() {
             R.drawable.leo5, R.drawable.virgo6, R.drawable.libra7, R.drawable.scorpio8, R.drawable.sagittarius9,
             R.drawable.capricorn10, R.drawable.aquarius11, R.drawable.pisces12
         )
-
+/*arrayadapter ile yapilan ornek
         //var myAdapter = ArrayAdapter<String>(this, R.layout.tek_satir, R.id.tvBurcAdi, burclar)
         var myAdapter =
             BurclarArrayAdaptor(this, R.layout.tek_satir, R.id.tvBurcAdi, burclar, burcTarihleri, burcResimleri)
         listBurclar.adapter = myAdapter
+*/
+
+        var myBaseAdapter = BurclarBaseAdapter(this)
+
+        listBurclar.adapter = myBaseAdapter
+
 
 
     }
