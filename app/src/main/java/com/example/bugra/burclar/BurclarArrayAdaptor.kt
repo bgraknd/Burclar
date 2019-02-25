@@ -75,3 +75,36 @@ class BurclarArrayAdaptor(
 
 
 }
+
+
+//******* Asagidaki kisimlar mainactivityden tasindi arrayadapter ile yapilan ornekte kullanilmisti
+
+//var burclar = arrayOf("Koç", "Boğa", "İkizler", "Yengeç", "Aslan", "Başak", "Terazi", "Akrep", "Yay", "Oğlak", "Kova", "Balık")
+
+/* Bu Alttaki kisimlarda arrayadapter yeterli gelmedigi icin iptal edildi
+
+
+//var burclarAdapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, burclar)
+var burclarAdapter = ArrayAdapter<String>(this, R.layout.tek_satir, R.id.tvBurcAdi, burclar)
+
+listBurclar.adapter = burclarAdapter
+
+/*listBurclar.setOnItemClickListener(object: AdapterView.OnItemClickListener{
+    override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        var gecici = p1 as TextView
+        Toast.makeText(this@MainActivity, "Tiklandi: "+gecici.text.toString()+ " Pos: "+p2, Toast.LENGTH_SHORT).show()
+    }
+})*/
+
+listBurclar.setOnItemClickListener { adapterView, view, i, l ->
+    var gecici = view as TextView
+    Toast.makeText(this@MainActivity, "Tiklandi: "+gecici.text.toString()+ " Pos: "+i, Toast.LENGTH_SHORT).show()
+}
+*/
+
+/*arrayadapter ile yapilan ornek
+        //var myAdapter = ArrayAdapter<String>(this, R.layout.tek_satir, R.id.tvBurcAdi, burclar)
+        var myAdapter =
+            BurclarArrayAdaptor(this, R.layout.tek_satir, R.id.tvBurcAdi, burclar, burcTarihleri, burcResimleri)
+        listBurclar.adapter = myAdapter
+*/
