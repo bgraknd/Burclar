@@ -9,26 +9,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import kotlinx.android.synthetic.main.tek_satir.view.*
 
-class BurclarBaseAdapter(context: Context) : BaseAdapter() {
+class BurclarBaseAdapter(context: Context, tumBurcBilgileri: ArrayList<Burc>) : BaseAdapter() {
 
-    var tumBurclar: ArrayList<Burclar>
+    var tumBurclar: ArrayList<Burc>
     var context: Context
 
     init {
-        tumBurclar = ArrayList<Burclar>(12)
+        this.tumBurclar = tumBurcBilgileri
         this.context = context
-
-        var burcAdlari = context.resources.getStringArray(R.array.burclar)
-        var burcTarihleri = context.resources.getStringArray(R.array.burcTarih)
-        var burcResimleri = arrayOf(
-            R.drawable.aries1, R.drawable.taurus2, R.drawable.gemini3, R.drawable.cancer4,
-            R.drawable.leo5, R.drawable.virgo6, R.drawable.libra7, R.drawable.scorpio8, R.drawable.sagittarius9,
-            R.drawable.capricorn10, R.drawable.aquarius11, R.drawable.pisces12
-        )
-        for (i in 0..11) {
-            var arraylisteAtanacakBurc = Burclar(burcAdlari[i], burcTarihleri[i], burcResimleri[i])
-            tumBurclar.add(arraylisteAtanacakBurc)
-        }
     }
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View? {
@@ -70,8 +58,6 @@ class BurclarBaseAdapter(context: Context) : BaseAdapter() {
         return tumBurclar.size
     }
 }
-
-data class Burclar(var burcAdi: String, var burcTarih: String, var burcSembol: Int)
 
 class ViewHolder2(tek_satir_view: View) {
     var burcResim: ImageView
