@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import kotlinx.android.synthetic.main.tek_satir.view.*
+import kotlinx.android.synthetic.main.simple_line.view.*
 
 class BurclarBaseAdapter(context: Context, tumBurcBilgileri: ArrayList<Sign>) : BaseAdapter() {
 
@@ -26,7 +26,7 @@ class BurclarBaseAdapter(context: Context, tumBurcBilgileri: ArrayList<Sign>) : 
 
         if (tek_satir_view == null) {
             var inflater = LayoutInflater.from(context)
-            tek_satir_view = inflater.inflate(R.layout.tek_satir, p2, false)
+            tek_satir_view = inflater.inflate(R.layout.simple_line, p2, false)
 
             viewHolder = ViewHolder2(tek_satir_view)
             tek_satir_view.tag = viewHolder
