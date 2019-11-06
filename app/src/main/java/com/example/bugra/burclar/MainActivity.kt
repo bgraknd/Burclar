@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         listBurclar.setOnItemClickListener { adapterView, view, i, l ->
 
-            var intent = Intent(this@MainActivity, DetayActivity::class.java)
+            var intent = Intent(this@MainActivity, DetailsActivity::class.java)
             intent.putExtra("tiklanilanOgePosition", i)
             intent.putExtra("tumBurcBilgileri", tumBurcBilgileri)
             startActivity(intent)
