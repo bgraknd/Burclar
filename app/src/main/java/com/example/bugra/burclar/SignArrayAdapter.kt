@@ -10,7 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import kotlinx.android.synthetic.main.tek_satir.view.*
 
-class BurclarArrayAdapter(
+class SignArrayAdapter(
     var gelenContext: Context,
     resource: Int,
     textViewResourceId: Int,

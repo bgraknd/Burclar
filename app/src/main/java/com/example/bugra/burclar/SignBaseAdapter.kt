@@ -9,9 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import kotlinx.android.synthetic.main.tek_satir.view.*
 
-class BurclarBaseAdapter(context: Context, tumBurcBilgileri: ArrayList<Burc>) : BaseAdapter() {
+class BurclarBaseAdapter(context: Context, tumBurcBilgileri: ArrayList<Sign>) : BaseAdapter() {
 
-    var tumBurclar: ArrayList<Burc>
+    var tumBurclar: ArrayList<Sign>
     var context: Context
 
     init {

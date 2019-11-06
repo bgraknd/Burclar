@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var tumBurcBilgileri: ArrayList<Burc>
+    lateinit var tumBurcBilgileri: ArrayList<Sign>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun veriKaynagiHazirla() {
-        tumBurcBilgileri = ArrayList<Burc>(12)
+        tumBurcBilgileri = ArrayList<Sign>(12)
 
         var burclar = resources.getStringArray(R.array.burclar)
         var burcTarihleri = resources.getStringArray(R.array.burcTarih)
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         var burcGenelOzellikler = resources.getStringArray(R.array.burcGenelOzellikler)
 
         for (i in 0..11) {
-            var arraylisteAtanacakBurc = Burc(
+            var arraylisteAtanacakBurc = Sign(
                 burclar[i], burcTarihleri[i],
                 burcResimleri[i], burcBuyukResimleri[i], burcGenelOzellikler[i]
             )

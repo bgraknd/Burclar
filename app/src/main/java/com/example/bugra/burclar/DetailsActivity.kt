@@ -14,7 +14,7 @@ class DetailsActivity : AppCompatActivity() {
 
 
         var position = intent.extras.get("tiklanilanOgePosition") as Int
-        var tumBurcBilgileri = intent.extras.get("tumBurcBilgileri") as ArrayList<Burc>
+        var tumBurcBilgileri = intent.extras.get("tumBurcBilgileri") as ArrayList<Sign>
 
         tvBurcOzellikleri.setText(tumBurcBilgileri.get(position).burcGenelOzellikleri)
         header.setImageResource(tumBurcBilgileri.get(position).burcBuyukResim)
