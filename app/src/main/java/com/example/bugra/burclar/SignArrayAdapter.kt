@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import kotlinx.android.synthetic.main.tek_satir.view.*
+import kotlinx.android.synthetic.main.simple_line.view.*
 
-class BurclarArrayAdaptor(
+class SignArrayAdapter(
     var gelenContext: Context,
     resource: Int,
     textViewResourceId: Int,
@@ -27,7 +27,7 @@ class BurclarArrayAdaptor(
 
         if (tek_satir_view == null) {
             var inflater = LayoutInflater.from(gelenContext)
-            tek_satir_view = inflater.inflate(R.layout.tek_satir, parent, false)
+            tek_satir_view = inflater.inflate(R.layout.simple_line, parent, false)
 
             viewHolder = ViewHolder(tek_satir_view)
             tek_satir_view.tag = viewHolder
@@ -85,7 +85,7 @@ class BurclarArrayAdaptor(
 
 
 //var burclarAdapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, burclar)
-var burclarAdapter = ArrayAdapter<String>(this, R.layout.tek_satir, R.id.tvBurcAdi, burclar)
+var burclarAdapter = ArrayAdapter<String>(this, R.layout.simple_line, R.id.tvBurcAdi, burclar)
 
 listBurclar.adapter = burclarAdapter
 
@@ -103,8 +103,8 @@ listBurclar.setOnItemClickListener { adapterView, view, i, l ->
 */
 
 /*arrayadapter ile yapilan ornek
-        //var myAdapter = ArrayAdapter<String>(this, R.layout.tek_satir, R.id.tvBurcAdi, burclar)
+        //var myAdapter = ArrayAdapter<String>(this, R.layout.simple_line, R.id.tvBurcAdi, burclar)
         var myAdapter =
-            BurclarArrayAdaptor(this, R.layout.tek_satir, R.id.tvBurcAdi, burclar, burcTarihleri, burcResimleri)
+            BurclarArrayAdaptor(this, R.layout.simple_line, R.id.tvBurcAdi, burclar, burcTarihleri, burcResimleri)
         listBurclar.adapter = myAdapter
 */
